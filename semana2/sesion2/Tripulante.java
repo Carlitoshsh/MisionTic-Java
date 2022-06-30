@@ -26,6 +26,14 @@ public class Tripulante {
         return nota / this.notasRetos.length;
     }
 
+    public static void edadMasAlta2(int edad1, int edad2) {
+        if (edad1 > edad2) {
+            System.out.println("La edad mas alta es: " + edad1);
+        } else {
+            System.out.println("La edad mas alta es: " + edad2);
+        }
+    }
+
     public String edadMasAlta(Tripulante otroTripulante) {
         if (this.edad > otroTripulante.edad) {
             return this.nombre;
@@ -43,5 +51,7 @@ public class Tripulante {
         System.out.println(tripulante2.CalcularNota());
 
         System.out.println(tripulante.edadMasAlta(tripulante2));
+
+        edadMasAlta2(19, 15);
     }
 }
