@@ -5,6 +5,9 @@ public abstract class Animal {
         System.out.println("Comiendo");
     }
 
+    // abstract: operador de concrecion
     public abstract void trabajar();
     public abstract void emitirUnSonido();
+    public abstract void dormir();
+    public abstract void hibernar();
 }
