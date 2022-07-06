@@ -13,5 +13,3 @@ public class Serpiente extends Reptil implements Animal {
         System.out.println("Hibernando");
     }
 }
-    
-// 9:09:00 pm
