@@ -11,7 +11,7 @@ public class Perro {
 
     @Override
     public String toString() {
-        return "Perro llamado " + this.nombre +
-                " de edad " + this.edad;
+        return "\n\tPerro llamado " + this.nombre +
+                " de edad " + this.edad + "\n";
     }
 }
