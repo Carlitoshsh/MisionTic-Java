@@ -88,7 +88,10 @@ select
   insert into libro values 
  (66, 'El gato con botas', 1999, 'Panama', 'Nuevo', 1);
  
- select * from editorial, libro;
+   insert into libro values 
+ (67, 'El gato con botas', 1999, 'Panama', 'Nuevo', 66);
+ 
+ select * from editorial, libro limit 5;
  
  -- APlicar where
  select * from editorial as ed, libro as l
@@ -98,3 +101,35 @@ select ed.EditorialNombre, l.libNombre
   from editorial as ed, libro as l
  where ed.IdEditorial = l.idEditorial;
  
+ 
+-- JOIN: Juntar informacion de dos tablas basados en el valor de columnas en comun
+select *
+from editorial as e left join libro as l
+on e.idEditorial = l.idEditorial;
+
+select *
+from editorial e right join libro  l
+on e.idEditorial = l.idEditorial;
+
+CREATE TABLE `libreriagrupo41`.`autor` (
+  `autorId` INT NOT NULL,
+  `autorNombre` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`autorId`));
+  
+  insert into autor values (1, "Homero");
+    insert into autor values (2, "Gabo");
+
+-- aplica para las columnas que se llamen igual en ambas tablas
+select * from
+editorial natural join libro;
+
+update libro
+set idAutor = 1
+where libId = 1;
+
+select * from 
+libro l  join autor a 
+on l.idAutor = a.autorId;
+
+
+
